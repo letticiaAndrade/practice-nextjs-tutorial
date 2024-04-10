@@ -2,6 +2,7 @@ import { lusitana } from '@/app/ui/fonts';
 import { generateYAxis } from '@/app/lib/utils';
 import { Revenue } from '@/app/lib/definitions';
 import { CalendarIcon } from '@heroicons/react/24/outline';
+import { fetchRevenue } from '@/app/lib/data';
 
 // This component is representational only.
 // For data visualization UI, check out:
@@ -10,10 +11,12 @@ import { CalendarIcon } from '@heroicons/react/24/outline';
 // https://airbnb.io/visx/
 
 export default async function RevenueChart({
-  revenue,
-}: {
-  revenue: Revenue[];
+//   revenue,
+// }: {
+//   revenue: Revenue[];
 }) {
+  const revenue = await fetchRevenue();
+
   const chartHeight = 350;
   // NOTE: comment in this code when you get to this point in the course
 
