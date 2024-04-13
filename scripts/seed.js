@@ -1,3 +1,5 @@
+// serve para povoar o banco de dados
+
 const { db } = require('@vercel/postgres');
 const {
   invoices,
